@@ -110,7 +110,13 @@ PUT http://localhost:9200/jieba_index
 - test analyzer:
 
 ```shell
-GET http://localhost:9200/jieba_index/_analyze?analyzer=my_ana&text=中国的伟大时代来临了，欢迎参观北京大学PKU
+GET http://localhost:9200/jieba_index/_analyze
+```
+```json
+{
+  "analyzer" : "my_ana",
+  "text" : ["中国的伟大时代来临了，欢迎参观北京大学PKU"]
+}
 ```
 Response as follow:
 
